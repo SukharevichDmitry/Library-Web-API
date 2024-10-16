@@ -17,7 +17,7 @@ Method: POST
 Body: raw JSON
 
 Data:
-
+```bash
 {
 
   "username": "your-username",
@@ -25,7 +25,7 @@ Data:
   "password": "your-password"
   
 }
-
+```
 #### To login:
 
 URL: http://localhost:8083/auth/login 
