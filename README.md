@@ -457,3 +457,9 @@ fetch('http://localhost:8082/library/books/{id}', {
 })
 .catch(error => console.error('Error:', error));
 ```
+
+### Another Documentation
+#### You can see swagger documentation after launching the application
+* [AuthService Documentation](http://localhost:8081/swagger-ui/index.html#/⁠)
+* [BookService Documentation](http://localhost:8081/swagger-ui/index.html#/⁠)
+* [LibraryService Documentation](http://localhost:8083/swagger-ui/index.html#/⁠)
