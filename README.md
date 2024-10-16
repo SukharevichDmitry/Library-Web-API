@@ -10,7 +10,7 @@ Each microservice is available as a Docker image on [my DockerHub](https://hub.d
 
 #### To register:
 
-URL: http://localhost:8083/auth/register 
+URL: http://localhost:8083/auth/register
 Method: POST
 Body: raw JSON
 Data:
@@ -19,7 +19,7 @@ Data:
   "password": "your-password"
 }
 
-### To login:
+#### To login:
 
 URL: http://localhost:8083/auth/login 
 Method: POST
@@ -32,11 +32,11 @@ Data:
 
 ### if you use cURL:
 
-### To register:
+#### To register:
 ```bash
 curl -X POST http://localhost:8083/auth/register -H "Content-Type: application/json" -d '{"username":"your-username", "password":"your-password"}'
 ```
-### To login:
+#### To login:
 ```bash
 curl -X POST http://localhost:8083/auth/login -H "Content-Type: application/json" -d '{"username":"your-username", "password":"your-password"}'
 ```
