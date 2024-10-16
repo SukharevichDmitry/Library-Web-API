@@ -11,6 +11,7 @@ Each microservice is available as a Docker image on [my DockerHub](https://hub.d
 #### To register:
 
 URL: http://localhost:8083/auth/register
+
 Method: POST
 Body: raw JSON
 Data:
