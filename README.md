@@ -8,7 +8,7 @@ Each microservice is available as a Docker image on my [DockerHub](https://hub.d
 ## Commands for [AuthService](https://github.com/SukharevichDmitry/Library-Web-API/tree/main/authservice):
 ### If you use [Postman](https://www.postman.com/downloads/):
 
-* #### to register:
+* to register:
 ```HTML
 URL: http://localhost:8083/auth/register
 Method: POST
@@ -19,7 +19,7 @@ Data:
   "password": "your-password"
 }
 ```
-* #### to login:
+* to login:
 ```HTML
 URL: http://localhost:8083/auth/login 
 Method: POST
