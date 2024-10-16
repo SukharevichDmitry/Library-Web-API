@@ -5,7 +5,7 @@ This project contains three microservices: authservice, bookservice, and library
 
 Each microservice is available as a Docker image on my [DockerHub](https://hub.docker.com/r/sukharevichdima/microservicesmanager). Also there are instructions how to run the app.
 
-## Commands for AuthService:
+## Commands for [AuthService](https://github.com/SukharevichDmitry/Library-Web-API/tree/main/authservice):
 ### If you use [Postman](https://www.postman.com/downloads/):
 
 * #### to register:
@@ -84,7 +84,7 @@ fetch('http://localhost:8083/auth/login', {
 .catch(error => console.error('Error:', error));
 ```
 
-## Commands for BookService:
+## Commands for [BookService](https://github.com/SukharevichDmitry/Library-Web-API/tree/main/bookservice):
 
 ### If you use [Postman](https://www.postman.com/downloads/):
 
@@ -281,7 +281,7 @@ fetch('http://localhost:8081/books/{id}', {
 })
 .catch(error => console.error('Error:', error));
 ```
-## Commands for LibraryService:
+## Commands for [LibraryService](https://github.com/SukharevichDmitry/Library-Web-API/tree/main/libraryservice):
 ### If you use [Postman](https://www.postman.com/downloads/):
 
 * #### To get all books:
