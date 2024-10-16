@@ -9,30 +9,22 @@ Each microservice is available as a Docker image on [my DockerHub](https://hub.d
 #### If you use Postman:
 
 #### to register:
-
-URL: http://localhost:8083/auth/register
-
-Method: POST
-
-Body: raw JSON
-
-Data:
 ```HTML
+URL: http://localhost:8083/auth/register
+Method: POST
+Body: raw JSON
+Data:
 {
-
   "username": "your-username",
-  
   "password": "your-password"
-  
 }
 ```
 #### to login:
-
+```HTML
 URL: http://localhost:8083/auth/login 
 Method: POST
 Bodde: raw JSON
 Data:
-```bash
 {
   "username": "your-username",
   "password": "your-password"
@@ -106,23 +98,23 @@ Authorization: Auth Type - Bearer Token, Token - <your_token>
 ```
 
 To get book by id:
-
+```HTML
 URL: http://localhost:8081/books/{id}
 Method: GET
 Body: raw JSON
 Data: null
 Authorization: Auth Type - Bearer Token, Token - <your_token>
-
+```
 To get book by isbn:
-
+```HTML
 URL: http://localhost:8081/books/isbn/{isbn}
 Method: GET
 Body: raw JSON
 Data: null
 Authorization: Auth Type - Bearer Token, Token - <your_token>
-
+```
 To create book:
-
+```HTML
 URL: http://localhost:8081/books
 Method: POST
 Body: raw JSON
@@ -135,9 +127,9 @@ Data:
    "description" : "your_description"
 }
 Authorization: Auth Type - Bearer Token, Token - <your_token>
-
+```
 To update book:
-
+```HTML
 URL: http://localhost:8081/books/{id}
 Method: PUT
 Body: raw JSON
@@ -150,11 +142,12 @@ Data:
    "description" : "your_description"
 }
 Authorization: Auth Type - Bearer Token, Token - <your_token>
-
+```
 To delete book:
-
+```HTML
 URL: http://localhost:8081/books/{id}
 Method: DELETE
 Body: raw JSON
 Data: null
 Authorization: Auth Type - Bearer Token, Token - <your_token>
+```
