@@ -31,7 +31,7 @@ Data:
 }
 ```
 
-### If you use cURL:
+### If you use [cURL](https://curl.se/):
 
 * #### to register:
 ```bash
@@ -86,7 +86,7 @@ fetch('http://localhost:8083/auth/login', {
 
 ## Commands for BookService:
 
-### If you use Postman:
+### If you use [Postman](https://www.postman.com/downloads/):
 
 * #### to get all books:
 ```HTML
@@ -152,7 +152,7 @@ Data: null
 Authorization: Auth Type - Bearer Token, Token - <your_token>
 ```
 
-### If you use cURL:
+### If you use [cURL](https://curl.se/):
 * #### To get all books:
 ```bash
 curl -X GET http://localhost:8081/books
@@ -282,7 +282,7 @@ fetch('http://localhost:8081/books/{id}', {
 .catch(error => console.error('Error:', error));
 ```
 ## Commands for LibraryService:
-### if you use Postman:
+### If you use [Postman](https://www.postman.com/downloads/):
 
 * #### To get all books:
 ```HTML
@@ -342,7 +342,7 @@ Body: raw JSON
 Data: null
 Authorization: Auth Type - Bearer Token, Token - <your_token>
 ```
-### If you use cURL:
+### If you use [cURL](https://curl.se/):
 * #### To get all books:
 ```bash
 curl -X GET http://localhost:8082/library/books
