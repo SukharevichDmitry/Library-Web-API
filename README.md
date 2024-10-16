@@ -6,9 +6,9 @@ This project contains three microservices: authservice, bookservice, and library
 Each microservice is available as a Docker image on [my DockerHub](https://hub.docker.com/r/sukharevichdima/microservicesmanager)
 
 ## Commands for AuthService:
-#### if you use Postman:
+#### If you use Postman:
 
-#### To register:
+#### to register:
 
 URL: http://localhost:8083/auth/register
 
@@ -26,25 +26,67 @@ Data:
   
 }
 ```
-#### To login:
+#### to login:
 
 URL: http://localhost:8083/auth/login 
 Method: POST
 Bodde: raw JSON
 Data:
+```bash
 {
   "username": "your-username",
   "password": "your-password"
 }
+```
 
-### if you use cURL:
+### If you use cURL:
 
-#### To register:
+#### to register:
 ```bash
 curl -X POST http://localhost:8083/auth/register -H "Content-Type: application/json" -d '{"username":"your-username", "password":"your-password"}'
 ```
-#### To login:
+#### to login:
 ```bash
 curl -X POST http://localhost:8083/auth/login -H "Content-Type: application/json" -d '{"username":"your-username", "password":"your-password"}'
 ```
 
+
+### If you use JavaScript(Fetch API):
+
+#### To register:
+```JavaScript 
+fetch('http://localhost:8083/auth/register', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        username: 'new-username',
+        password: 'new-password'
+    })
+})
+.then(response => {
+    if (response.ok) {
+        console.log('Registration successful');
+    } else {
+        console.error('Registration failed');
+    }
+})
+.catch(error => console.error('Error:', error));
+```
+
+#### To login:
+
+fetch('http://localhost:8083/auth/login', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        username: 'your-username',
+        password: 'your-password'
+    })
+})
+.then(response => response.json())
+.then(data => console.log('Success:', data))
+.catch(error => console.error('Error:', error));
