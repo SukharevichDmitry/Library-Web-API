@@ -17,7 +17,7 @@ Method: POST
 Body: raw JSON
 
 Data:
-```bash
+```HTML
 {
 
   "username": "your-username",
