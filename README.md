@@ -151,3 +151,33 @@ Body: raw JSON
 Data: null
 Authorization: Auth Type - Bearer Token, Token - <your_token>
 ```
+
+### If you use cURL:
+* ####To get all books:
+```bash
+curl -X GET http://localhost:8081/books
+```
+* #### To get book by id:
+```bash
+curl -X GET http://localhost:8081/books/{id}
+```
+* #### To get book by isbn:
+```bash
+curl -X GET http://localhost:8081/books/isbn/{isbn}
+```
+
+* #### To crate book
+```bash
+curl -X POST http://localhost:8081/books -H "Content-Type: application/json" -d '{"title":"New Book Title", "author":"Author Name", "isbn":"1234567890123", "publishedDate":"2024-01-01"}'
+```
+
+* #### To update book
+```bash
+curl -X PUT http://localhost:8081/books/{id} -H "Content-Type: application/json" -d '{"title":"Updated Book Title", "author":"Updated Author Name", "isbn":"9876543210987", "publishedDate":"2025-01-01"}'
+```
+
+* #### To delete book:
+```bash
+curl -X DELETE http://localhost:8081/books/{id}
+```
+
