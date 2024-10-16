@@ -281,3 +281,89 @@ fetch('http://localhost:8081/books/{id}', {
 })
 .catch(error => console.error('Error:', error));
 ```
+## Commands for LibraryService:
+### if you use Postman:
+
+* #### To get all books:
+```HTML
+URL: http://localhost:8082/library/books
+Method: GET
+Body: raw JSON
+Data: null
+Authorization: Auth Type - Bearer Token, Token - <your_token>
+```
+* #### To get books by id:
+```HTML
+URL: http://localhost:8082/library/books/{id}
+Method: GET
+Body: raw JSON
+Data: null
+Authorization: Auth Type - Bearer Token, Token - <your_token>
+```
+* #### To get all available books:
+```HTML
+URL: http://localhost:8082/library/books/available
+Method: GET
+Body: raw JSON
+Data: null
+Authorization: Auth Type - Bearer Token, Token - <your_token>
+```
+* #### To add book:
+```HTML
+URL: http://localhost:8082/library/books/add
+Method: POST
+Body: raw JSON
+Data: 
+{
+  "is_available" : true,
+  "borrow_time" : 2024-10-14 18:45:17.722095,
+  "return_time" : 2024-10-21 18:45:17.722095,
+}
+Authorization: Auth Type - Bearer Token, Token - <your_token>
+```
+* #### To update book:
+```HTML
+URL: http://localhost:8082/library/books/{id}
+Method: PUT
+Body: raw JSON
+Data: 
+{
+  "is_available" : true,
+  "borrow_time" : 2024-10-14 18:45:17.722095,
+  "return_time" : 2024-10-21 18:45:17.722095,
+}
+Authorization: Auth Type - Bearer Token, Token - <your_token>
+```
+* #### To delete book:
+```HTML
+URL: http://localhost:8082/library/books/{id}
+Method: DELETE
+Body: raw JSON
+Data: null
+Authorization: Auth Type - Bearer Token, Token - <your_token>
+```
+### If you use cURL:
+* #### To get all books:
+```bash
+curl -X GET http://localhost:8082/library/books
+```
+* #### To get books by id:
+```bash
+curl -X GET http://localhost:8082/library/books/{id}
+```
+* #### To get all available books:
+```bash
+curl -X GET http://localhost:8082/library/books/available
+```
+* #### To add book:
+```bash
+curl -X POST http://localhost:8082/library/add -H "Content-Type: application/json" -d '{"title":"Book Title", "author":"Author Name", "available":true}'
+```
+* #### To update book:
+```bash
+curl -X PUT http://localhost:8082/library/books/{id} -H "Content-Type: application/json" -d '{"title":"Updated Book Title", "author":"Updated Author Name", "available":false}'
+```
+* #### To delete book:
+```bash
+curl -X DELETE http://localhost:8082/library/books/{id}
+```
