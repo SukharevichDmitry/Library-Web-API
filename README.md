@@ -33,11 +33,11 @@ Data:
 
 ### If you use [cURL](https://curl.se/):
 
-* #### to register:
+* to register:
 ```bash
 curl -X POST http://localhost:8083/auth/register -H "Content-Type: application/json" -d '{"username":"your-username", "password":"your-password"}'
 ```
-* #### to login:
+* to login:
 ```bash
 curl -X POST http://localhost:8083/auth/login -H "Content-Type: application/json" -d '{"username":"your-username", "password":"your-password"}'
 ```
@@ -45,7 +45,7 @@ curl -X POST http://localhost:8083/auth/login -H "Content-Type: application/json
 
 ### If you use JavaScript(Fetch API):
 
-* #### to register:
+* to register:
 ```JavaScript 
 fetch('http://localhost:8083/auth/register', {
     method: 'POST',
@@ -67,7 +67,7 @@ fetch('http://localhost:8083/auth/register', {
 .catch(error => console.error('Error:', error));
 ```
 
-* #### to login:
+* to login:
 ```JavaScript
 fetch('http://localhost:8083/auth/login', {
     method: 'POST',
