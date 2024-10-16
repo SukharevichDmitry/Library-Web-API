@@ -6,7 +6,7 @@ This project contains three microservices: authservice, bookservice, and library
 Each microservice is available as a Docker image on [my DockerHub](https://hub.docker.com/r/sukharevichdima/microservicesmanager)
 
 ## Commands for AuthService:
-#### If you use Postman:
+### If you use Postman:
 
 #### to register:
 ```HTML
@@ -45,7 +45,7 @@ curl -X POST http://localhost:8083/auth/login -H "Content-Type: application/json
 
 ### If you use JavaScript(Fetch API):
 
-#### To register:
+#### to register:
 ```JavaScript 
 fetch('http://localhost:8083/auth/register', {
     method: 'POST',
@@ -67,7 +67,7 @@ fetch('http://localhost:8083/auth/register', {
 .catch(error => console.error('Error:', error));
 ```
 
-#### To login:
+#### to login:
 ```JavaScript
 fetch('http://localhost:8083/auth/login', {
     method: 'POST',
@@ -86,9 +86,9 @@ fetch('http://localhost:8083/auth/login', {
 
 ## Commands for BookService:
 
-if you use Postman:
+### If you use Postman:
 
-To get all books:
+#### to get all books:
 ```HTML
 URL: http://localhost:8081/books
 Method: GET
@@ -97,7 +97,7 @@ Data: null
 Authorization: Auth Type - Bearer Token, Token - <your_token>
 ```
 
-To get book by id:
+#### to get book by id:
 ```HTML
 URL: http://localhost:8081/books/{id}
 Method: GET
@@ -105,7 +105,7 @@ Body: raw JSON
 Data: null
 Authorization: Auth Type - Bearer Token, Token - <your_token>
 ```
-To get book by isbn:
+#### to get book by isbn:
 ```HTML
 URL: http://localhost:8081/books/isbn/{isbn}
 Method: GET
@@ -113,7 +113,7 @@ Body: raw JSON
 Data: null
 Authorization: Auth Type - Bearer Token, Token - <your_token>
 ```
-To create book:
+#### to create book:
 ```HTML
 URL: http://localhost:8081/books
 Method: POST
@@ -128,7 +128,7 @@ Data:
 }
 Authorization: Auth Type - Bearer Token, Token - <your_token>
 ```
-To update book:
+#### to update book:
 ```HTML
 URL: http://localhost:8081/books/{id}
 Method: PUT
@@ -143,7 +143,7 @@ Data:
 }
 Authorization: Auth Type - Bearer Token, Token - <your_token>
 ```
-To delete book:
+#### to delete book:
 ```HTML
 URL: http://localhost:8081/books/{id}
 Method: DELETE
