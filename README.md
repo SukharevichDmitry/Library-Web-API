@@ -153,7 +153,7 @@ Authorization: Auth Type - Bearer Token, Token - <your_token>
 ```
 
 ### If you use cURL:
-* ####To get all books:
+* #### To get all books:
 ```bash
 curl -X GET http://localhost:8081/books
 ```
@@ -166,7 +166,7 @@ curl -X GET http://localhost:8081/books/{id}
 curl -X GET http://localhost:8081/books/isbn/{isbn}
 ```
 
-* #### To crate book
+* #### To create book
 ```bash
 curl -X POST http://localhost:8081/books -H "Content-Type: application/json" -d '{"title":"New Book Title", "author":"Author Name", "isbn":"1234567890123", "publishedDate":"2024-01-01"}'
 ```
