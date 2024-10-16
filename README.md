@@ -76,7 +76,7 @@ fetch('http://localhost:8083/auth/register', {
 ```
 
 #### To login:
-
+```JavaScript
 fetch('http://localhost:8083/auth/login', {
     method: 'POST',
     headers: {
@@ -90,3 +90,71 @@ fetch('http://localhost:8083/auth/login', {
 .then(response => response.json())
 .then(data => console.log('Success:', data))
 .catch(error => console.error('Error:', error));
+```
+
+## Commands for BookService:
+
+if you use Postman:
+
+To get all books:
+```HTML
+URL: http://localhost:8081/books
+Method: GET
+Body: raw JSON
+Data: null
+Authorization: Auth Type - Bearer Token, Token - <your_token>
+```
+
+To get book by id:
+
+URL: http://localhost:8081/books/{id}
+Method: GET
+Body: raw JSON
+Data: null
+Authorization: Auth Type - Bearer Token, Token - <your_token>
+
+To get book by isbn:
+
+URL: http://localhost:8081/books/isbn/{isbn}
+Method: GET
+Body: raw JSON
+Data: null
+Authorization: Auth Type - Bearer Token, Token - <your_token>
+
+To create book:
+
+URL: http://localhost:8081/books
+Method: POST
+Body: raw JSON
+Data: 
+{
+   "title" : "your_title",
+   "author" : "your_author",
+   "isbn" : "your_isbn",
+   "genre" : "your_genre",
+   "description" : "your_description"
+}
+Authorization: Auth Type - Bearer Token, Token - <your_token>
+
+To update book:
+
+URL: http://localhost:8081/books/{id}
+Method: PUT
+Body: raw JSON
+Data:
+{
+   "title" : "your_title",
+   "author" : "your_author",
+   "isbn" : "your_isbn",
+   "genre" : "your_genre",
+   "description" : "your_description"
+}
+Authorization: Auth Type - Bearer Token, Token - <your_token>
+
+To delete book:
+
+URL: http://localhost:8081/books/{id}
+Method: DELETE
+Body: raw JSON
+Data: null
+Authorization: Auth Type - Bearer Token, Token - <your_token>
