@@ -367,3 +367,93 @@ curl -X PUT http://localhost:8082/library/books/{id} -H "Content-Type: applicati
 ```bash
 curl -X DELETE http://localhost:8082/library/books/{id}
 ```
+### If you use JavaScript(Fetch API):
+* #### To get all books:
+```JavaScript
+fetch('http://localhost:8082/library/books', {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
+.then(response => response.json())
+.then(data => console.log('All Books:', data))
+.catch(error => console.error('Error:', error));
+```
+* #### To get book by id:
+```JavaScript
+fetch('http://localhost:8082/library/books/{id}', {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
+.then(response => response.json())
+.then(data => console.log('Book by ID:', data))
+.catch(error => console.error('Error:', error));
+```
+* #### To get all available books:
+```JavaScript
+fetch('http://localhost:8082/library/books/available', {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
+.then(response => response.json())
+.then(data => console.log('Available Books:', data))
+.catch(error => console.error('Error:', error));
+```
+* #### To add book:
+```JavaScript
+fetch('http://localhost:8082/library/add', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        title: 'New Library Book',
+        author: 'Author Name',
+        isbn: '978-3-16-148410-0',
+        available: true
+    })
+})
+.then(response => response.json())
+.then(data => console.log('Created Library Book:', data))
+.catch(error => console.error('Error:', error));
+```
+* #### To update book:
+```JavaScript
+fetch('http://localhost:8082/library/books/{id}', {
+    method: 'PUT',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        title: 'Updated Library Book Title',
+        author: 'Updated Author Name',
+        isbn: '978-3-16-148410-0',
+        available: false
+    })
+})
+.then(response => response.json())
+.then(data => console.log('Updated Library Book:', data))
+.catch(error => console.error('Error:', error));
+```
+* #### To delete book:
+```JavaScript
+fetch('http://localhost:8082/library/books/{id}', {
+    method: 'DELETE',
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
+.then(response => {
+    if (response.ok) {
+        console.log('Library Book deleted');
+    } else {
+        console.error('Error deleting book');
+    }
+})
+.catch(error => console.error('Error:', error));
+```
