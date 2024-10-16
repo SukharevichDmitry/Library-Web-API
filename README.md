@@ -1,9 +1,9 @@
 # CRUD Library-Web-API
 This project contains three microservices: authservice, bookservice, and libraryservice, along with a PostgreSQL database.
 
-## Microservices
+## How to run
 
-Each microservice is available as a Docker image on [my DockerHub](https://hub.docker.com/r/sukharevichdima/microservicesmanager)
+Each microservice is available as a Docker image on [my DockerHub](https://hub.docker.com/r/sukharevichdima/microservicesmanager). Also there are instructions how to run the app.
 
 ## Commands for AuthService:
 ### If you use [Postman](https://www.postman.com/downloads/):
