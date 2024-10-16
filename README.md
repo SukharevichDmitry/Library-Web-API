@@ -6,9 +6,9 @@ This project contains three microservices: authservice, bookservice, and library
 Each microservice is available as a Docker image on [my DockerHub](https://hub.docker.com/r/sukharevichdima/microservicesmanager)
 
 ## Commands for AuthService:
-### if you use Postman:
+#### if you use Postman:
 
-### To register:
+#### To register:
 
 URL: http://localhost:8083/auth/register 
 Method: POST
