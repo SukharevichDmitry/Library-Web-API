@@ -181,3 +181,110 @@ curl -X PUT http://localhost:8081/books/{id} -H "Content-Type: application/json"
 curl -X DELETE http://localhost:8081/books/{id}
 ```
 
+### If you use JavaScript(Fetch API):
+
+* #### To get all books:
+```JavaScript
+
+```
+* ####
+```JavaScript
+fetch('http://localhost:8081/books', {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
+.then(response => response.json())
+.then(data => console.log('Books:', data))
+.catch(error => console.error('Error:', error));
+```
+* ####
+```JavaScript
+
+```
+* #### To get book by id:
+```JavaScript
+fetch('http://localhost:8081/books/{id}', { 
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
+.then(response => response.json())
+.then(data => console.log('Book by ID:', data))
+.catch(error => console.error('Error:', error));
+```
+* #### To get book by isbn:
+```JavaScript
+To get book by isbn:
+
+fetch('http://localhost:8081/books/isbn/{isbn}', { 
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
+.then(response => response.json())
+.then(data => console.log('Book by ISBN:', data))
+.catch(error => console.error('Error:', error));
+```
+* #### To create book:
+```JavaScript
+fetch('http://localhost:8081/books', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+   	title : 'your_title',
+   	author : 'your_author',
+   	isbn : 'your_isbn',
+   	genre : 'your_genre',
+   	description : 'your_description'
+    })
+})
+.then(response => response.json())
+.then(data => console.log('Created Book:', data))
+.catch(error => console.error('Error:', error));
+```
+* #### To update book:
+```JavaScript
+To update book:
+
+fetch('http://localhost:8081/books/{id}', { 
+    method: 'PUT',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+   	title : 'your_title',
+   	author : 'your_author',
+   	isbn : 'your_isbn',
+   	genre : 'your_genre',
+   	description : 'your_description'
+    })
+})
+.then(response => response.json())
+.then(data => console.log('Updated Book:', data))
+.catch(error => console.error('Error:', error));
+```
+* #### To delete book:
+```JavaScript
+To delete book:
+
+fetch('http://localhost:8081/books/{id}', {
+    method: 'DELETE',
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
+.then(response => {
+    if (response.ok) {
+        console.log('Book deleted');
+    } else {
+        console.error('Error deleting book');
+    }
+})
+.catch(error => console.error('Error:', error));
+```
