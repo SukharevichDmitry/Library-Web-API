@@ -33,11 +33,11 @@ Data:
 
 ### If you use cURL:
 
-#### to register:
+* #### to register:
 ```bash
 curl -X POST http://localhost:8083/auth/register -H "Content-Type: application/json" -d '{"username":"your-username", "password":"your-password"}'
 ```
-#### to login:
+* #### to login:
 ```bash
 curl -X POST http://localhost:8083/auth/login -H "Content-Type: application/json" -d '{"username":"your-username", "password":"your-password"}'
 ```
@@ -45,7 +45,7 @@ curl -X POST http://localhost:8083/auth/login -H "Content-Type: application/json
 
 ### If you use JavaScript(Fetch API):
 
-#### to register:
+* #### to register:
 ```JavaScript 
 fetch('http://localhost:8083/auth/register', {
     method: 'POST',
@@ -67,7 +67,7 @@ fetch('http://localhost:8083/auth/register', {
 .catch(error => console.error('Error:', error));
 ```
 
-#### to login:
+* #### to login:
 ```JavaScript
 fetch('http://localhost:8083/auth/login', {
     method: 'POST',
@@ -88,7 +88,7 @@ fetch('http://localhost:8083/auth/login', {
 
 ### If you use Postman:
 
-#### to get all books:
+* #### to get all books:
 ```HTML
 URL: http://localhost:8081/books
 Method: GET
@@ -97,7 +97,7 @@ Data: null
 Authorization: Auth Type - Bearer Token, Token - <your_token>
 ```
 
-#### to get book by id:
+* #### to get book by id:
 ```HTML
 URL: http://localhost:8081/books/{id}
 Method: GET
@@ -105,7 +105,7 @@ Body: raw JSON
 Data: null
 Authorization: Auth Type - Bearer Token, Token - <your_token>
 ```
-#### to get book by isbn:
+* #### to get book by isbn:
 ```HTML
 URL: http://localhost:8081/books/isbn/{isbn}
 Method: GET
@@ -113,7 +113,7 @@ Body: raw JSON
 Data: null
 Authorization: Auth Type - Bearer Token, Token - <your_token>
 ```
-#### to create book:
+* #### to create book:
 ```HTML
 URL: http://localhost:8081/books
 Method: POST
@@ -128,7 +128,7 @@ Data:
 }
 Authorization: Auth Type - Bearer Token, Token - <your_token>
 ```
-#### to update book:
+* #### to update book:
 ```HTML
 URL: http://localhost:8081/books/{id}
 Method: PUT
@@ -143,7 +143,7 @@ Data:
 }
 Authorization: Auth Type - Bearer Token, Token - <your_token>
 ```
-#### to delete book:
+* #### to delete book:
 ```HTML
 URL: http://localhost:8081/books/{id}
 Method: DELETE
