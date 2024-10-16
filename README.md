@@ -185,10 +185,6 @@ curl -X DELETE http://localhost:8081/books/{id}
 
 * #### To get all books:
 ```JavaScript
-
-```
-* ####
-```JavaScript
 fetch('http://localhost:8081/books', {
     method: 'GET',
     headers: {
@@ -199,10 +195,7 @@ fetch('http://localhost:8081/books', {
 .then(data => console.log('Books:', data))
 .catch(error => console.error('Error:', error));
 ```
-* ####
-```JavaScript
 
-```
 * #### To get book by id:
 ```JavaScript
 fetch('http://localhost:8081/books/{id}', { 
